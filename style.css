@@ -1,0 +1,150 @@
+/* mobile screen size */
+#logo{
+    width: 475px;
+    animation: hw5_move 5s;
+}
+
+@keyframes hw5_move{
+    from{width: 25px; opacity: 0}
+    to{width: 475px; opacity: 1}
+}
+
+body{
+    font-family: "Poppins", serif;
+    background-color: #f1f1f1;
+    background-image: url('../images/concrete_seamless.png');
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card > header{
+    background-color: #288088;
+    border: solid 2px #45adad;
+    padding: 20px 0px 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.pricing{
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: column;
+    align-items: center
+}
+
+.card{
+    border-radius: 50px 50px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_links a:visited{
+    color: blue;
+}
+
+.gallery img{
+    border: solid 10px #50c7c7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 450px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* can't figure out how to align all 3 prices :( */
+
+
+
+
+
+/* medium screen size */
+@media all and (min-width: 1200px){
+
+header{
+    display: flex;
+    align-items: flex-start;
+}
+
+.nav_links{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 450px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 275px;
+}
+}
+
+/* can't figure out how to align the nav_links to the right & make the header stay in place */
+
+
+
+
+
+/* reduced motion
+@media ('prefers-reduced-motion'){
+    not sure what to add here
+} */
+
+
+
+
+/* print screen */
+@media print{
+
+
+body{
+    font-family: Arial, Helvetica;
+    background-image: none;
+}
+
+.nav_links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.pricing{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.card{
+    border: solid 2px #45ADDD;
+    display: flex;
+    flex-basis: 325px;
+}
+
+.gallery {
+    display: none;
+}
+}
+
+/* can't figure out how to make word "gallery" disappear, add space between nav_links, and add thumbs up */
